@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import 'tachyons';
+import Navigation from './components/Navigation';
+import Hero from './components/Hero';
+import Signin from './components/Signin/Signin';
+import Register from './components/Register/Register';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      route:'signin'
+    }
+  
+  }
+
+  onRouteChange = (route) => {
+    this.setState({route: route})
+  }
+
+    render(){
+      return(
+        <div className="App">
+          <Navigation onRouteChange={this.onRouteChange} />
+          { this.state.route === 'home'
+          ? <div>
+              <Hero />
+            </div>
+          : ( 
+            this.state.route === 'signin' 
+            ? <Signin onRouteChange={this.onRouteChange}/>
+            : <Register onRouteChange={this.onRouteChange}/>
+            )
+          }
+        </div>
+      );
+    }
 }
 
 export default App;
