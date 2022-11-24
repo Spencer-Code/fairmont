@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = () =>{
+function Hero(){
     return (
         <div className="cover bg-left bg-center-l">
             <div className="cover bg-left bg-center-l">
