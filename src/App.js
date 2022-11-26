@@ -27,7 +27,7 @@ class App extends Component {
 
     render(){
       return(
-        <BrowserRouter className="App">
+        <div className="App">
           <Routes>
             <Route index path="/" element={<Home/>}/>
             <Route path="signin" element={<Signin/>}/>
@@ -38,7 +38,7 @@ class App extends Component {
             <Route path="chatroom" element={<Chatroom/>}/>
             <Route path="donate" element={<Donate/>}/>
           </Routes>
-        </BrowserRouter>
+        </div>
       );
     }
 }
