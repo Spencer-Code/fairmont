@@ -20,7 +20,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name:'test'
+      firstName:'test',
+      lastName: 'dude',
+      permission: 0
     }
   
   }
