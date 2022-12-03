@@ -5,7 +5,6 @@ import Navigation from "../Navigation/Navigation";
 function Home(){
     return (
         <div>
-            <Navigation/>
             <Hero/>
         </div>
     );

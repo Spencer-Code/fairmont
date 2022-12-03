@@ -4,7 +4,6 @@ import Navigation from "../Navigation/Navigation";
 function Gallery(){
     return (
         <div>
-            <Navigation/>
             <h1>Gallery</h1>
         </div>
     );

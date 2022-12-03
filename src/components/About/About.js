@@ -1,11 +1,11 @@
 import React from "react";
 import Navigation from "../Navigation/Navigation";
 
-function About(){
+function About({getAppUser}){
     return (
         <div>
-            <Navigation/>
             <h1>About</h1>
+            {console.log(getAppUser())}
         </div>
     );
 }
