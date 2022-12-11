@@ -25,6 +25,7 @@ function Register({loadUser, getAppUser}) {
              if(user){
                 console.log(user)
                 loadUser(user);
+                navigate('/')
              }
          });
      }

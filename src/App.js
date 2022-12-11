@@ -16,6 +16,11 @@ import {
   BrowserRouter
 } from "react-router-dom"
 import Navigation from './components/Navigation/Navigation';
+import Newsletter from './components/Newsletter/newsletter';
+import DownloadEmails from './components/DownloadEmails/DownloadEmails';
+import AdminPanel from './components/AdminPanel/AdminPanel';
+import UserManagement from './components/UserManagement/UserManagement';
+import SupportLinkManagement from './components/SupportLinkManagement/SupportLinkManagement'
 
 class App extends Component {
   constructor() {
@@ -61,6 +66,11 @@ class App extends Component {
             <Route path="blog" element={<Blog/>}/>
             <Route path="chatroom" element={<Chatroom getAppUser={this.getAppUser}/>}/>
             <Route path="donate" element={<Donate/>}/>
+            <Route path="newsletter" element={<Newsletter/>}/>
+            <Route path="download-emails" element={<DownloadEmails/>}/>
+            <Route path="admin-panel" element={<AdminPanel/>}/>
+            <Route path="user-management" element={<UserManagement/>}/>
+            <Route path="support-link-management" element={<SupportLinkManagement/>}/>
           </Routes>
         </div>
       );

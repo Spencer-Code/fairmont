@@ -10,9 +10,11 @@ function Navigation({onRouteChange}){
             <p className="f5 link dim white underline pa3 pointer"><Link to="/blog">Blog</Link></p>
             <p className="f5 link dim white underline pa3 pointer"><Link to="/chatroom">Chatroom</Link></p>
             <p className="f5 link dim white underline pa3 pointer"><Link to="/donate">Donate</Link></p>
+            <p className="f5 link dim white underline pa3 pointer"><Link to="/newsletter">NewsLetter</Link></p>
+            <p className="f5 link dim white underline pa3 pointer"><Link to="/admin-panel">Admin Panel</Link></p>
             <p className="f5 link dim white underline pa3 pointer"><Link to="/signin">Sign in</Link></p>
         </nav>
     );
 }
 
-export default Navigation;
+export default Navigation; 
