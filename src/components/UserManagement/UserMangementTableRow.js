@@ -37,6 +37,7 @@ const UserMangementTableRow = (props) => {
             window.alert(`Successfuly updated ${firstName} ${lastName}'s account`, );
             switchEnabledStatus();
             switchCheckedStatus();
+            props.setStateLoaded(false)
          })
     }
 

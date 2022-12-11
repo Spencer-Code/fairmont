@@ -1,12 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
+import SupportLinkDiv from "./SupportLinkDiv";
 
 function Donate(){
-    return (
-        <div>
-            <h1>Donate</h1>
-        </div>
-    );
+    const [linkList, setLinkList]= useState([]);
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() =>{
+        if(!loaded){
+            fetch('http://localhost:5001/supportLinks',{
+                        method: 'get',
+                        headers: {'Content-Type': 'application/json'}
+                    })
+                    .then(data => { 
+                        return data.json();
+                    })
+                    .then(jsonData => {
+                        setLinkList(() => { return jsonData })
+                        setLoaded(() =>{return true});
+                    });
+        }
+    },[loaded])
+
+    if(!loaded){
+        return (
+            <div>
+                <div>
+                    <h1>Support Us</h1>
+                    <p>There are many ways to support Fairmont as we continue to suppot our community. Below are some ways to support us!</p>
+                </div>
+                <div>
+                    <p>Loading content...</p>
+                </div>
+            </div>
+        )
+        
+    } else {
+        return (
+            <div>
+                <div>
+                    <h1>Support Us</h1>
+                    <p>There are many ways to support Fairmont as we continue to suppot our community. Below are some ways to support us!</p>
+                </div>
+                <div>
+                    <SupportLinkDiv linkList = {linkList}/>
+                </div>
+                
+                
+            </div>
+        );
+    }
 }
 
 export default Donate

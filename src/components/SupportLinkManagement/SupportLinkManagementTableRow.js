@@ -33,6 +33,7 @@ const SupportLinkManagementTableRow = (props) => {
             window.alert(`Successfuly updated ${siteName} with ${siteUrl} url`, );
             switchEnabledStatus();
             switchCheckedStatus();
+            props.setStateLoaded(false)
          })
     }
 
