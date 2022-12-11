@@ -7,6 +7,7 @@ const UserMangementTableRow = (props) => {
     const [firstName, setFirstName] = useState(props.firstName);
     const [lastName, setLastName] = useState(props.lastName);
     const [email, setEmail] = useState(props.email);
+    const [oldEmail, setOldEmail] = useState(props.email);
     const [permission, setPermission] = useState(props.permission);
     const [enabled, setEnabled] = useState('disabled')
     const [checked, setChecked] = useState('')
@@ -31,6 +32,7 @@ const UserMangementTableRow = (props) => {
                 last_name: lastName,
                 email: email,
                 permission: permission,
+                old_email: oldEmail
             })
          }).then(response => response.json())
          .then(() => {
