@@ -2,12 +2,14 @@
     cursor:pointer;
     /* display:inline-block; */
     text-align: center;
-    font-size:4em;
+    font-size:3em;
     border-radius:4px;
     border:1px solid #bbb;
     transition: all 0.3s linear;
-    background-color: lightblue;
+    background-color: rgba(77, 67, 61, .5);
     text-decoration: none;
+    color: white;
+    padding: 0.25em;
     opacity: 100%;
 }
 .SupportLinkStyle:hover {

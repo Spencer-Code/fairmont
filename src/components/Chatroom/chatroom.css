@@ -1,0 +1,8 @@
+#div1 { 
+    height: 500px; 
+    width:500px; 
+    overflow: scroll; 
+    margin:0 auto; 
+    border-style: solid;
+    border-color: black;
+}
