@@ -66,6 +66,7 @@ function SupportLinkManagement(){
                 <h1>Support Link Management</h1>
                 <div>
                     <p>Create a new Support Link:</p>
+                    <p>MUST INCLUDE: http://www. in the link URL</p>
                     <form onSubmit={onSubmitSupportLink}>
                         <input 
                             type='text'

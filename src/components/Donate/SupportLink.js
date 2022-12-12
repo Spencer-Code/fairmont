@@ -12,7 +12,7 @@ const SupportLink = (props) => {
 
     function goToExternalSite(e){
         e.preventDefault();
-        const site = 'http://' + siteUrl.toString()
+        const site = siteUrl.toString()
         window.location.replace(site)
     }
 

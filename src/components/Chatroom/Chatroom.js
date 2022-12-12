@@ -1,5 +1,6 @@
 //import React from "react";
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 // import useInterval from 'react-useinterval';
 import Navigation from "../Navigation/Navigation";
 import "./chatroom.css"
@@ -8,6 +9,7 @@ function Chatroom({getAppUser}){
     const CurrentUser = getAppUser().email
     console.log(getAppUser())
     const messageInput = useRef(null);
+    const navigate = useNavigate()
     function submitmessage(e) {
 
         e.preventDefault();
@@ -29,7 +31,11 @@ function Chatroom({getAppUser}){
      }
 
      useEffect(() => { 
-        getmessage();
+        if(getAppUser().email){
+            getmessage();
+        } else {
+            navigate('/')
+        }
      }, []);
 
     //  setInterval(() => {
@@ -61,13 +67,14 @@ function Chatroom({getAppUser}){
             <h1 id="title">Fairmont chatroom</h1>
 
 
-            <div id="div1">
-                <div id="div2">
-                <div className="app">
+            <div id="div1Chat">
+                <div id="div2Chat">
+                <div className="appChat">
                 {message &&
                 message.map((FMmesage) => (
                 <div className="item-container">
-                    User: {FMmesage.email} <div className="message">message: {FMmesage.message}</div>
+                    <div className="user"> <strong>{FMmesage.email} message: </strong> <br/> {FMmesage.message}</div>
+                    <br/>
                 </div>
                 ))}
             </div>
