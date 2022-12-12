@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./SupportLink.css"
 
 const SupportLink = (props) => {
     const id = useRef(props.id);
@@ -9,13 +10,14 @@ const SupportLink = (props) => {
 
     const navigate = useNavigate()
 
-    function goToExternalSite(){
+    function goToExternalSite(e){
+        e.preventDefault();
         const site = 'http://' + siteUrl.toString()
         window.location.replace(site)
     }
 
     return (
-         <a onClick={() => goToExternalSite()}>{siteName}</a>
+         <a class="SupportLinkStyle" onClick={(e) => goToExternalSite(e)} href=''> {siteName} </a>
     );
 }
 

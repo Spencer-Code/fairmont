@@ -1,4 +1,5 @@
 import SupportLink from "./SupportLink";
+import "./SupportLinkDiv.css"
 
 
 const SupportLinkDiv =({linkList}) =>{
@@ -7,7 +8,7 @@ const SupportLinkDiv =({linkList}) =>{
        return <p>No results. Check back later to support us!</p>
     } else {
         return (
-            <div>
+            <div className="SupportLinkDivStyle">
                 {
                     linkList.map((link, i) =>{
                         return (

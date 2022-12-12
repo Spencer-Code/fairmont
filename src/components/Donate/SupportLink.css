@@ -1,0 +1,18 @@
+.SupportLinkStyle {
+    cursor:pointer;
+    /* display:inline-block; */
+    text-align: center;
+    font-size:4em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+    background-color: lightblue;
+    text-decoration: none;
+    opacity: 100%;
+}
+.SupportLinkStyle:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}

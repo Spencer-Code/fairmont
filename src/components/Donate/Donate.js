@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import SupportLinkDiv from "./SupportLinkDiv";
+import "./SupportUs.css"
 
 function Donate(){
     const [linkList, setLinkList]= useState([]);
@@ -27,7 +28,7 @@ function Donate(){
             <div>
                 <div>
                     <h1>Support Us</h1>
-                    <p>There are many ways to support Fairmont as we continue to suppot our community. Below are some ways to support us!</p>
+                    <p>There are many ways to support Fairmont as we continue to suppot our community. Below are some ways to do just that!</p>
                 </div>
                 <div>
                     <p>Loading content...</p>
@@ -37,10 +38,10 @@ function Donate(){
         
     } else {
         return (
-            <div>
+            <div className="SupportUsDiv">
                 <div>
                     <h1>Support Us</h1>
-                    <p>There are many ways to support Fairmont as we continue to suppot our community. Below are some ways to support us!</p>
+                    <p>There are many ways to support Fairmont as we continue to suppot our community. Below are some ways to do just that!</p>
                 </div>
                 <div>
                     <SupportLinkDiv linkList = {linkList}/>
